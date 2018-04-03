@@ -1,7 +1,6 @@
 env/
-
+base.html
 
 *.pyc
 __pycache__/
 
-db.sqlite3
