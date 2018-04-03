@@ -1,12 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User Forms</title>
+</head>
+<body>
+
+    <form method="POST">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+
+    <input type="submit" value="Submit" >
+</form>
+</body>
+</html>
 
 
-<script>
-function makeField(a) {
-  var input = document.createElement('input');
-  document.body.appendChild(input);
-}</script>
-
-
-<button onclick="makeField()">Make a field</button>
 
 
