@@ -13,10 +13,19 @@
     </table>
 
     <input type="submit" value="Submit" >
+    <button onclick="makeField()">Make a new field</button>
 </form>
 </body>
 </html>
 
+
+
+<script>
+function makeField() {
+  var input = document.createElement('input');
+  document.body.appendChild(input);
+}
+</script>
 
 
 
