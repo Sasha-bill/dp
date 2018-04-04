@@ -3,7 +3,6 @@ from django.db import models
 
 
 class UserModel(models.Model):
-
     data = JSONField()
 
     def __str__(self):

@@ -4,15 +4,14 @@ from django.http import HttpResponse
 from .models import UserModel
 
 
-
 def index(request):
     if request.method == "POST":
 
-        data = request.POST.get("data")
-        UserModel.objects.create(data=data)
-        userdata = UserModel.objects.in_bulk()
+        #data = request.POST.get("data")
+        UserModel.objects.create(data=request.POST.get("data"))
+        userdata = UserModel.objects.all()
 
-        return HttpResponse("<h2>  JSON OUTPUT:  {0}   </h2>".format(userdata))
+        return HttpResponse("<h3>  JSON OUTPUT:  {0}   </h3>".format(userdata))
     else:
         userform = UserForm()
         return render(request, "index.html", {"form": userform})
